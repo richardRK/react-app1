@@ -1,15 +1,15 @@
-import React from "react";
 import { useState } from "react";
 
-const UseFormEx = (initialValues) => {
+export const useFormEx = (initialValues) => {
   const [values, setValues] = useState(initialValues);
 
   return [
     values,
     (e) => {
-      setValues({ ...values, [e.target.name]: e.target.values });
+      setValues({
+        ...values,
+        [e.target.name]: e.target.value,
+      });
     },
   ];
 };
-
-export default UseFormEx;

@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import UseFormEx from "./UseFormEx";
-
+import { useFormEx } from "./UseFormEx";
 const UseStateExample = () => {
   // const [{ count1, count2 }, setCount] = useState({ count1: 10, count2: 20 });
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
 
-  const [values, handleChange] = UseFormEx({ email: "", password: "" });
+  const [values, handleChange] = useFormEx({ email: "", password: "" });
 
   return (
     <div>
